@@ -1,4 +1,7 @@
-
+from cheat.gamecalculator import Calculator
 
 if __name__ == "__main__":
-    pass
+    board = Calculator()
+
+    for i in board.calculate():
+        print(i)

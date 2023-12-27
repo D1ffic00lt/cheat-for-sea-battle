@@ -11,9 +11,9 @@ class Board(object):
     def board(self):
         return self.__board
 
-    def __getitem__(self, item: tuple[[slice, int], [slice, int]]) -> list | Field:
+    def __getitem__(self, item: tuple[[slice, int], [slice, int]] | int | slice) -> list | Field:
         item1 = item
-        item2 = None
+        item2: int | slice = None
         if isinstance(item, tuple):
             item1, item2 = item
 
@@ -23,7 +23,7 @@ class Board(object):
             if isinstance(item2, slice):
                 result_board = []
                 for i in self.__board[item1.start:item1.stop:item1.step]:
-                    result_board.append(i[item2.start:item2.stop:item2.step])
+                    result_board.extend(i[item2.start:item2.stop:item2.step])
                 return result_board
             result_board = []
             for i in self.__board[item1.start:item1.stop:item1.step]:
@@ -31,9 +31,6 @@ class Board(object):
             return result_board
         if item2 is not None:
             if isinstance(item2, slice):
-                result_board = []
-                for i in self.__board[item1]:
-                    result_board.append(i[item2.start:item2.stop:item2])
-                return result_board
+                return self.__board[item1][item2.start:item2.stop:item2.step]
             return self.__board[item1][item2]
         return self.__board[item1]
