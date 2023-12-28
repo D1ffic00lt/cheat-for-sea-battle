@@ -23,16 +23,16 @@ public:
         this->four_decker_ships_count = four_decker_ships_count;
     };
 
-    std::vector<std::vector<int>> calculate();
-    std::pair<int, int> get_best_move();
-    void set_ship(int x, int y, bool value);
-    void set_shooted(int x, int y, bool value);
-    void set_status(int x, int y, bool value);
+    [[maybe_unused]] std::vector<std::vector<int>> calculate();
+    [[maybe_unused]] std::pair<int, int> get_best_move();
+    [[maybe_unused]] void set_ship(int x, int y, bool value);
+    [[maybe_unused]] void set_shooted(int x, int y, bool value);
+    [[maybe_unused]] void set_status(int x, int y, bool value);
 
-    void remove_single_decker_ship();
-    void remove_double_decker_ship();
-    void three_single_decker_ship();
-    void four_single_decker_ship();
+    [[maybe_unused]] void remove_single_decker_ship();
+    [[maybe_unused]] void remove_double_decker_ship();
+    [[maybe_unused]] void three_single_decker_ship();
+    [[maybe_unused]] void four_single_decker_ship();
 };
 
 #endif
