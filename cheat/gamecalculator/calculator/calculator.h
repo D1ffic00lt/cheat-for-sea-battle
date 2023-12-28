@@ -7,7 +7,7 @@
 #include "board.h"
 #include "field.h"
 
-class Calculator : Board {
+class [[maybe_unused]] Calculator : Board {
 private:
     static bool checkFields(std::vector<Field> &fields);
 
