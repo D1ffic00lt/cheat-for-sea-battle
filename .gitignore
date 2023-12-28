@@ -4,3 +4,6 @@
 
 *.DS_Store
 *.vsconfig
+*.so
+
+cheat/gamecalculator/calculator.cpp
