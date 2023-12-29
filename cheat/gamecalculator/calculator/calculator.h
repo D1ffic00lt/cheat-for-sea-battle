@@ -1,9 +1,6 @@
 #ifndef GAMECALCULATOR_CALCULATOR_H
 #define GAMECALCULATOR_CALCULATOR_H
 
-#ifndef EXAMPLE_H
-#define EXAMPLE_H
-
 #include "board.h"
 #include "field.h"
 
@@ -31,9 +28,8 @@ public:
 
     [[maybe_unused]] void removeSingleDeckerShip();
     [[maybe_unused]] void removeDoubleDeckerShip();
-    [[maybe_unused]] void threeSingleDeckerShip();
-    [[maybe_unused]] void fourSingleDeckerShip();
+    [[maybe_unused]] void removeThreeDeckerShip();
+    [[maybe_unused]] void removeFourDeckerShip();
 };
 
-#endif
 #endif //GAMECALCULATOR_CALCULATOR_H

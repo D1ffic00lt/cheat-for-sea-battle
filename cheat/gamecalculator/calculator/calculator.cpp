@@ -208,12 +208,12 @@ std::vector<std::vector<int>> Calculator::calculate() {
         this->doubleDeckerShipsCount--;
     }
 }
-[[maybe_unused]] void Calculator::threeSingleDeckerShip() {
+[[maybe_unused]] void Calculator::removeThreeDeckerShip() {
     if (this->threeDeckerShipsCount > 0) {
         this->threeDeckerShipsCount--;
     }
 }
-[[maybe_unused]] void Calculator::fourSingleDeckerShip() {
+[[maybe_unused]] void Calculator::removeFourDeckerShip() {
     if (this->fourDeckerShipsCount > 0) {
         this->fourDeckerShipsCount--;
     }
