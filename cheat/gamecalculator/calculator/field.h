@@ -6,15 +6,13 @@ class Field {
 
 public:
     bool ship, status, shooted;
-
-    explicit Field(bool status = true, bool shooted = false, bool ship = false);
+    explicit Field(bool status = true, bool shooted = false, bool ship = false) {
+        this->status = status;
+        this->shooted = shooted;
+        this->ship = ship;
+    }
 };
 
-Field::Field(bool status, bool shooted, bool ship) {
-    this->status = status;
-    this->shooted = shooted;
-    this->ship = ship;
-}
 
 
 

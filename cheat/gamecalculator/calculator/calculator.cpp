@@ -158,7 +158,7 @@ std::vector<std::vector<int>> Calculator::calculate() {
     return this->probabilityBoard;
 }
 
-[[maybe_unused]] std::pair<int, int> Calculator::getBestMove() {
+std::pair<int, int> Calculator::getBestMove() {
     if (this->probabilityBoard.empty()) {
         this->calculate();
     }
@@ -180,40 +180,40 @@ std::vector<std::vector<int>> Calculator::calculate() {
     return std::make_pair(0, 0);
 }
 
-[[maybe_unused]] bool Calculator::checkFields(std::vector<Field> &fields) {
+bool Calculator::checkFields(std::vector<Field> &fields) {
     return std::all_of(fields.begin(), fields.end(), [](const Field &field) {
         return field.status;
     });
 }
 
-[[maybe_unused]] void Calculator::setShip(int x, int y, bool value) {
+void Calculator::setShip(int x, int y, bool value) {
     this->board[y][x].ship = value;
 }
 
-[[maybe_unused]] void Calculator::setShooted(int x, int y, bool value) {
+void Calculator::setShooted(int x, int y, bool value) {
     this->board[y][x].shooted = value;
 }
 
-[[maybe_unused]] void Calculator::setStatus(int x, int y, bool value) {
+void Calculator::setStatus(int x, int y, bool value) {
     this->board[y][x].status = value;
 }
 
-[[maybe_unused]] void Calculator::removeSingleDeckerShip() {
+void Calculator::removeSingleDeckerShip() {
     if (this->singleDeckerShipsCount > 0) {
         this->singleDeckerShipsCount--;
     }
 }
-[[maybe_unused]] void Calculator::removeDoubleDeckerShip() {
+void Calculator::removeDoubleDeckerShip() {
     if (this->doubleDeckerShipsCount > 0) {
         this->doubleDeckerShipsCount--;
     }
 }
-[[maybe_unused]] void Calculator::removeThreeDeckerShip() {
+void Calculator::removeThreeDeckerShip() {
     if (this->threeDeckerShipsCount > 0) {
         this->threeDeckerShipsCount--;
     }
 }
-[[maybe_unused]] void Calculator::removeFourDeckerShip() {
+void Calculator::removeFourDeckerShip() {
     if (this->fourDeckerShipsCount > 0) {
         this->fourDeckerShipsCount--;
     }

@@ -8,4 +8,6 @@ include_directories(calculator)
 add_executable(gamecalculator
         calculator/board.h
         calculator/calculator.cpp
-        calculator/field.h)
+        calculator/field.h
+        calculator/main.cpp
+        )
