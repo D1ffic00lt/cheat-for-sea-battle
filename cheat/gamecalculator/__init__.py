@@ -1,1 +1,1 @@
-from .calculator import Calculator
+import builded_calculator.gamecalculator as calculator
