@@ -1,1 +1,1 @@
-import builded_calculator.gamecalculator as calculator
+import cheat.gamecalculator.builded_calculator.gamecalculator as calculator

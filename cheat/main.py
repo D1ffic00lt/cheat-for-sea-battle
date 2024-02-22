@@ -1,8 +1,11 @@
-from cheat.gamecalculator import Calculator
+import sys
+
+from PyQt5.QtWidgets import QApplication
+
+from cheat.app import MainWindow
 
 if __name__ == "__main__":
-    board = Calculator()
-
-    print(board.get_best_move())
-    for i in range(10):
-        print(board.probability_board[i])
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
