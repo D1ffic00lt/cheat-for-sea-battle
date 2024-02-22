@@ -18,22 +18,17 @@ class PyCalculator(object):
     def set_shooted(self, y: int, x: int, value: bool) -> None:
         pass
 
-
-    def set_status(self, y: int, x: int, value: bool) -> None:
+    def set_status(self, y: int, x: int, value: bool, clicked: bool = False) -> None:
         pass
 
-
-    def remove_single_decker_ship(self) -> None:
+    def set_single_decker_ship(self, value: int) -> None:
         pass
 
-
-    def remove_double_decker_ship(self) -> None:
+    def set_double_decker_ship(self, value: int) -> None:
         pass
 
-
-    def remove_three_decker_ship(self) -> None:
+    def set_three_decker_ship(self, value: int) -> None:
         pass
 
-
-    def remove_four_decker_ship(self) -> None:
+    def set_four_decker_ship(self, value: int) -> None:
         pass
