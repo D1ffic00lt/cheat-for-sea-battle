@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
     QGridLayout, QSpinBox
 )
 
-from gamecalculator import calculator
+from .gamecalculator import calculator
 
 
 class Cell(QWidget):
